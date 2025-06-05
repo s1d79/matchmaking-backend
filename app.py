@@ -3,11 +3,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# 🔓 TEMPORARY CORS: allow all origins
+# Allow all origins temporarily
 CORS(app)
-
-
-
 
 @app.route("/api/evaluate", methods=["POST"])
 def evaluate():

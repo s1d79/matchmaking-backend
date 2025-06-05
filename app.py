@@ -4,7 +4,10 @@ from datetime import datetime
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=[
+    "https://matchmaking-frontend-nine.vercel.app",
+    "https://matchmaking-frontend-py0cmfefu-s1d79s-projects.vercel.app"
+])
 
 @app.route("/api/evaluate", methods=["POST"])
 def evaluate():

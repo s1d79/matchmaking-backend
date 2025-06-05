@@ -114,3 +114,6 @@ def evaluate():
     result["Element"] = evaluate_element_compatibility(result["P1 Element"], result["P2 Element"])
 
     return jsonify(result)
+
+if __name__ == "__main__":
+    app.run()

@@ -3,11 +3,12 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# FIXED: Allow Vercel Frontend
+# ✅ CORS Fix for specific origins (Vercel)
 CORS(app, resources={r"/api/*": {"origins": [
     "https://matchmaking-frontend-nine.vercel.app",
     "https://matchmaking-frontend-py0cmfefu-s1d79s-projects.vercel.app"
 ]}})
+
 
 
 @app.route("/api/evaluate", methods=["POST"])
